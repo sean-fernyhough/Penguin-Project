@@ -32,6 +32,7 @@ createPenguin = () => {
             previous.remove();
         } catch { }
         let main = document.querySelector('#result');
+        main.classList = "text-center border border-light"
         let container = document.createElement('div');
         container.id = "container"
         main.appendChild(container);

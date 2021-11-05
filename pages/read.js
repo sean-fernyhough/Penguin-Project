@@ -25,12 +25,23 @@ let removeChildren = (parent) => {
     }
 }
 
+let idTab = document.querySelector('#idTab')
+let nameTab = document.querySelector('#nameTab')
+let ageTab = document.querySelector('#ageTab')
+let allTab = document.querySelector('#allTab')
+
+
 let br1 = document.createElement('br');
 let br2 = document.createElement('br');
 let br3 = document.createElement('br');
 let searchType = "id";
 
 setSearchId = () => {
+
+    idTab.classList = "nav-link  bg-light active"
+    ageTab.classList = "nav-link  bg-light"
+    nameTab.classList = "nav-link  bg-light"
+    allTab.classList = "nav-link  bg-light"
 
     searchType = "id";
     removeChildren(searchArea);
@@ -51,6 +62,11 @@ setSearchId = () => {
 }
 setSearchName = () => {
 
+    idTab.classList = "nav-link  bg-light"
+    ageTab.classList = "nav-link  bg-light"
+    nameTab.classList = "nav-link  bg-light active"
+    allTab.classList = "nav-link  bg-light"
+
     searchType = "name";
     removeChildren(searchArea);
     let label = document.createElement('label');
@@ -70,6 +86,11 @@ setSearchName = () => {
 
 setSearchAge = () => {
 
+    idTab.classList = "nav-link  bg-light"
+    ageTab.classList = "nav-link  bg-light  active"
+    nameTab.classList = "nav-link  bg-light"
+    allTab.classList = "nav-link  bg-light"
+
     searchType = "age";
     removeChildren(searchArea);
     let label = document.createElement('label');
@@ -88,6 +109,11 @@ setSearchAge = () => {
 }
 
 setSearchAll = () => {
+
+    idTab.classList = "nav-link  bg-light"
+    ageTab.classList = "nav-link  bg-light"
+    nameTab.classList = "nav-link  bg-light"
+    allTab.classList = "nav-link  bg-light active"
 
     searchType = "all";
     removeChildren(searchArea);
@@ -173,8 +199,9 @@ let search = () => {
 }
 
 body.addEventListener('load', setSearchId)
-document.querySelector('#idTab').addEventListener('click', setSearchId)
-document.querySelector('#nameTab').addEventListener('click', setSearchName)
-document.querySelector('#ageTab').addEventListener('click', setSearchAge)
-document.querySelector('#allTab').addEventListener('click', setSearchAll)
+
+idTab.addEventListener('click', setSearchId)
+nameTab.addEventListener('click', setSearchName)
+ageTab.addEventListener('click', setSearchAge)
+allTab.addEventListener('click', setSearchAll)
 document.querySelector('#searchBtn').addEventListener('click', search)
