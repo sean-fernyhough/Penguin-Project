@@ -160,7 +160,7 @@ let search = () => {
                 removeChildren(results);
                 for (obj of data) {
                     console.log(obj)
-                    createUI(data);
+                    createUI(obj);
 
                 }
 
