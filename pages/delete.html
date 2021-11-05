@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penguins</title>
+    <title>Create-a-Penguin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- <style>
+        @media only screen and (max-width: 900px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+    </style> -->
 </head>
 
 <body class="bg-primary">
@@ -23,19 +30,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link  active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/create.html">Create</a>
+                        <a class="nav-link" href="create.html">Create</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/update.html">Update</a>
+                        <a class="nav-link" href="update.html">Update</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/read.html">Find</a>
+                        <a class="nav-link" href="read.html">Find</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/delete.html">Delete</a>
+                        <a class="nav-link active" aria-current="page" href="delete.html">Delete</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -46,8 +53,31 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <br>
+        <br>
+        <div>
+            <div class="bg-light">
+                <div class="text-center" id="searchArea">
+                    <br>
+                    <label for="idInput">Penguin's ID:</label><br><input type="number" id="searchbar" name="idInput" />
 
-    <script src="index.js"></script>
+                </div>
+                <br>
+                <div class="text-center">
+                    <button type="button" id="deleteBtn">Search</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+    <script src="delete.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
